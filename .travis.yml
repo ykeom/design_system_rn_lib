@@ -12,9 +12,9 @@ install:
   - yarn global add codecov
   - yarn
 script:
-  - yarn run lint
-  - yarn run test:ci && codecov
+  - lint-staged
   - yarn run compile
+  - yarn run test:ci && codecov
 # after_success:
 #   - |
 #     if [ "$TRAVIS_PULL_REQUEST" == "false" -a "$TRAVIS_BRANCH" == "master" ]; then

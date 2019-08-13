@@ -94,10 +94,5 @@
       "git add",
       "jest --bail --findRelatedTests"
     ]
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
   }
 }
