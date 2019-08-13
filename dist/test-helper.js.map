@@ -1,0 +1,1 @@
+{"version":3,"sources":["../src/test-helper.js"],"names":["adapter","Adapter"],"mappings":"gGAAA,8BACA,mFAEA,sBAAU,CAAEA,OAAO,CAAE,GAAIC,+BAAJ,EAAX,CAAV","sourcesContent":["import { configure } from 'enzyme';\nimport Adapter from 'enzyme-adapter-react-16';\n\nconfigure({ adapter: new Adapter() });\n"],"file":"test-helper.js"}
