@@ -1,5 +1,7 @@
 # Caredoc Design System
 
+[![Build Status](https://travis-ci.org/team-caredoc/design_system.svg?branch=master)](https://travis-ci.org/team-caredoc/design_system)
+
 ## Usage
 
 ```bash
