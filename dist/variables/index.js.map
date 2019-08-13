@@ -1,0 +1,1 @@
+{"version":3,"sources":["../../src/variables/index.js"],"names":[],"mappings":";;;;;;;;;;;;;;;;;;;;;;;;;;;;;;AAAA;;AACA;;AACA;;AACA","sourcesContent":["import colors from './colors';\nimport fonts from './fonts';\nimport spacing from './spacing';\nimport alignment from './alignment';\n\nexport {\n  colors, fonts, spacing, alignment,\n};\n"],"file":"index.js"}

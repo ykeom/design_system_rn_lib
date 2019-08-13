@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ToolBar should render 1`] = `
+<View
+  style={Object {}}
+>
+  <Text>
+    tool bar
+  </Text>
+</View>
+`;

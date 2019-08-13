@@ -1,0 +1,103 @@
+{
+  "name": "@caredoc/design-system",
+  "version": "1.0.0",
+  "description": "Caredoc Design System (React Native)",
+  "main": "dist/index.js",
+  "types": "src/index.d.js",
+  "repository": "git@bitbucket.org:team-buttercup/caredoc_design_system.git",
+  "author": "ohsung cho <fifthsage@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "compile": "rm -rf dist/* && babel src --out-dir dist --ignore */**/__test__ --source-maps ",
+    "build": "webpack --config webpack.config.build.js",
+    "dev": "webpack --config webpack.config.dev.js",
+    "start": "webpack-dev-server --config webpack.config.dev.js --open",
+    "test": "jest",
+    "test:update": "jest -u",
+    "test:ci": "jest --runInBand",
+    "test:watch": "jest --watch",
+    "lint": "eslint --ext js,ts src",
+    "clean-install": "rm -rf node_modules && yarn"
+  },
+  "dependencies": {
+    "enzyme": "^3.10.0",
+    "enzyme-adapter-react-16": "^1.14.0",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "react-native": "^0.60.4",
+    "styled-components": "^4.3.2"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.5.5",
+    "@babel/core": "^7.5.5",
+    "@babel/preset-env": "^7.5.5",
+    "@babel/preset-react": "^7.0.0",
+    "@react-native-community/eslint-config": "^0.0.5",
+    "@types/enzyme": "^3.10.3",
+    "@types/enzyme-adapter-react-16": "^1.0.5",
+    "@types/jest": "^24.0.17",
+    "@types/react": "^16.8.24",
+    "@types/react-native": "^0.60.3",
+    "@types/styled-components": "^4.1.9",
+    "@typescript-eslint/eslint-plugin": "^1.13.0",
+    "@typescript-eslint/parser": "^1.13.0",
+    "babel-eslint": "^10.0.2",
+    "babel-jest": "^24.8.0",
+    "babel-loader": "^8.0.6",
+    "babel-plugin-styled-components": "^1.10.6",
+    "css-loader": "^3.2.0",
+    "enzyme-to-json": "^3.4.0",
+    "eslint": "5.3.0",
+    "eslint-config-airbnb": "17.1.1",
+    "eslint-plugin-import": "^2.18.0",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-prettier": "^3.1.0",
+    "eslint-plugin-react": "^7.14.2",
+    "html-loader": "^0.5.5",
+    "html-webpack-plugin": "^3.2.0",
+    "husky": "^3.0.2",
+    "jest": "^24.8.0",
+    "jest-fetch-mock": "^2.1.2",
+    "lint-staged": "^9.2.1",
+    "mini-css-extract-plugin": "^0.8.0",
+    "prettier": "^1.18.2",
+    "typescript": "^3.5.3",
+    "uglifyjs-webpack-plugin": "^2.2.0",
+    "webpack": "^4.39.1",
+    "webpack-cli": "^3.3.6",
+    "webpack-dev-server": "^3.7.2"
+  },
+  "jest": {
+    "preset": "react-native",
+    "coverageDirectory": "./coverage/",
+    "testPathIgnorePatterns": [
+      "\\.snap$",
+      "<rootDir>/node_modules/",
+      "<rootDir>/sandbox/"
+    ],
+    "collectCoverageFrom": [
+      "src/**/*.js",
+      "!src/index.js"
+    ],
+    "transform": {
+      "^.+\\.js$": "<rootDir>/node_modules/react-native/jest/preprocessor.js"
+    },
+    "testRegex": "(/__tests__/.*|\\.(test|spec))\\.((js|ts))$",
+    "setupFilesAfterEnv": [
+      "<rootDir>/src/test-helper.js"
+    ],
+    "cacheDirectory": ".jest/cache"
+  },
+  "lint-staged": {
+    "src/**/*.js": [
+      "eslint --fix",
+      "git add",
+      "jest --bail --findRelatedTests"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged && yarn run compile && git add dist"
+    }
+  }
+}

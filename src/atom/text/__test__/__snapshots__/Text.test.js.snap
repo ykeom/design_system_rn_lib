@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Text should render 1`] = `
+<View
+  style={Object {}}
+>
+  <Text>
+    button
+  </Text>
+</View>
+`;

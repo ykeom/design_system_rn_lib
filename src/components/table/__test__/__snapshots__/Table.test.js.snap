@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Table should render 1`] = `
+<View
+  style={Object {}}
+>
+  <Text>
+    table
+  </Text>
+</View>
+`;
