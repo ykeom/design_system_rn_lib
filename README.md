@@ -5,33 +5,11 @@
 ## Usage
 
 ```bash
-$ yarn add -D git+ssh://git@bitbucket.org:team-buttercup/caredoc_design_system.git
+$ yarn add -D git+ssh://git@github.com:team-caredoc/design_system.git
 ```
 
 ```JSX
 import { Button, ... } from "@caredoc/design-system";
-```
-
-## Workspace Setup
-
-```bash
-#install dependencies
-
-$ yarn
-```
-
-## Test
-
-```bash
-# test
-
-$ yarn run test
-```
-
-```bash
-#update snapshot
-
-$ yarn run test -u
 ```
 
 ## Category
