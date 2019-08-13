@@ -94,5 +94,5 @@
       "git add",
       "jest --bail --findRelatedTests"
     ]
-  
+  }
 }
