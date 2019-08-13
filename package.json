@@ -8,7 +8,7 @@
   "author": "ohsung cho <fifthsage@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "compile": "rm -rf dist/* && babel src --out-dir dist --ignore */**/__test__ --source-maps ",
+    "compile": "rm -rf dist/* && babel src --out-dir dist --ignore */**/__test__ --source-maps",
     "build": "webpack --config webpack.config.build.js",
     "dev": "webpack --config webpack.config.dev.js",
     "start": "webpack-dev-server --config webpack.config.dev.js --open",

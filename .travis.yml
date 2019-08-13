@@ -19,21 +19,13 @@ script:
 #       echo -e "machine github.com\n login react-native-elements-ci\n password $GITHUB_TOKEN" >> ~/.netrc
 #       cd website && yarn && GIT_USER=react-native-elements-ci yarn run publish-gh-pages
 #     fi
-before_deploy:
-  - git config --global user.email "builds@travis-ci.com"
-  - git config --global user.name "Travis CI"
-  - export GIT_TAG=$TRAVIS_BRANCH-0.0.$TRAVIS_BUILD_NUMBER
-  - git add dist
-  - git commit -am "Generated tag from TravisCI for build $TRAVIS_BUILD_NUMBER"
-  - git tag $GIT_TAG
-  - git push -q https://github.com/team-caredoc/design_system --tags
-  - ls -R
-deploy:
-  provider: releases
-  api_key: $GH_TOKEN
-  file_glob: true
-  file: "dist/*/**"
-  skip_cleanup: true
-  on:
-    tags: true
-    all_branches: true
+# before_deploy:
+# deploy:
+#   provider: releases
+#   api_key: $GH_TOKEN
+#   file_glob: true
+#   file: "dist/*/**"
+#   skip_cleanup: true
+#   on:
+#     tags: true
+#     all_branches: true
