@@ -21,7 +21,8 @@ script:
 #       echo -e "machine github.com\n login react-native-elements-ci\n password $GITHUB_TOKEN" >> ~/.netrc
 #       cd website && yarn && GIT_USER=react-native-elements-ci yarn run publish-gh-pages
 #     fi
-before_deploy: "yarn run compile"
+before_deploy:
+  - "yarn run compile"
 deploy:
   provider: releases
   api_key: $GH_TOKEN
@@ -29,4 +30,5 @@ deploy:
   file: "dist/**/*"
   skip_cleanup: true
   on:
+    # branch: master
     tags: true
