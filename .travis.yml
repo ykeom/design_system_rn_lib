@@ -14,6 +14,7 @@ install:
 script:
   - yarn run lint
   - yarn run test:ci && codecov
+  - yarn run compile
 # after_success:
 #   - |
 #     if [ "$TRAVIS_PULL_REQUEST" == "false" -a "$TRAVIS_BRANCH" == "master" ]; then
