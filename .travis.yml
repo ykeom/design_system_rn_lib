@@ -11,6 +11,7 @@ install:
 script:
   - lint-staged
   - yarn run test:ci && codecov
+  - yarn run compile
 # after_success:
 #   - |
 #     if [ "$TRAVIS_PULL_REQUEST" == "false" -a "$TRAVIS_BRANCH" == "master" ]; then
@@ -18,7 +19,13 @@ script:
 #       echo -e "machine github.com\n login react-native-elements-ci\n password $GITHUB_TOKEN" >> ~/.netrc
 #       cd website && yarn && GIT_USER=react-native-elements-ci yarn run publish-gh-pages
 #     fi
-before_deploy: "yarn run compile"
+before_deploy:
+  - git config --global user.email "builds@travis-ci.com"
+  - git config --global user.name "Travis CI"
+  - export GIT_TAG=$TRAVIS_BRANCH-0.1.$TRAVIS_BUILD_NUMBER
+  - git tag $GIT_TAG -a -m "Generated tag from TravisCI for build $TRAVIS_BUILD_NUMBER"
+  - git push -q https://$TAGPERM@github.com/RlonRyan/JBasicX --tags
+  - ls -R
 deploy:
   provider: releases
   api_key: $GH_TOKEN
