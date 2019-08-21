@@ -5,7 +5,7 @@
 ## Usage
 
 ```bash
-$ yarn add -D git+ssh://git@github.com:team-caredoc/design_system.git
+$ yarn add -D git+ssh://git@bitbucket.org:team-buttercup/caredoc_design_system_react_native_library.git
 ```
 
 ```JSX
