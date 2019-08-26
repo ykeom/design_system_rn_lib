@@ -1,11 +1,11 @@
 # Caredoc Design System
 
-[![Build Status](https://travis-ci.org/team-caredoc/design_system.svg?branch=master)](https://travis-ci.org/team-caredoc/design_system)
+[![Build Status](https://travis-ci.org/team-caredoc/design_system_rn_lib.svg?branch=master)](https://travis-ci.org/team-caredoc/design_system_rn_lib)
 
 ## Usage
 
 ```bash
-$ yarn add -D git+ssh://git@bitbucket.org:team-buttercup/caredoc_design_system_react_native_library.git
+$ yarn add -D git+ssh://git@bitbucket.org:team-buttercup/caredoc_design_system_rm_lib.git
 ```
 
 ```JSX
