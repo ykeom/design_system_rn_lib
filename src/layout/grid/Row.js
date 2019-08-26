@@ -5,14 +5,14 @@ const styles = StyleSheet.create({
   root: {},
 });
 
-class Select extends Component {
+class Row extends Component {
   render() {
     return (
       <View style={styles.root}>
-        <Text>select</Text>
+        <Text>layout</Text>
       </View>
     );
   }
 }
 
-export default Select;
+export default Row;

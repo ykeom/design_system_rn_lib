@@ -5,14 +5,14 @@ const styles = StyleSheet.create({
   root: {},
 });
 
-class Chip extends Component {
+class Tab extends Component {
   render() {
     return (
       <View style={styles.root}>
-        <Text>chip</Text>
+        <Text>tab</Text>
       </View>
     );
   }
 }
 
-export default Chip;
+export default Tab;

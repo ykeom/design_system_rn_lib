@@ -1,11 +1,11 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 import toJson from 'enzyme-to-json';
-import Select from '../Select';
+import Toast from '../Toast';
 
-describe('Select', () => {
+describe('Toast', () => {
   it('should render', () => {
-    const component = shallow(<Select />);
+    const component = shallow(<Toast />);
 
     expect(component.length).toBe(1);
     expect(toJson(component)).toMatchSnapshot();

@@ -1,8 +1,12 @@
 import colors from './colors';
 import fonts from './fonts';
-import spacing from './spacing';
-import alignment from './alignment';
+import unit from './unit';
+
+const noImageSrc = {
+  url: 'noimage',
+  thumb: 'noimage thumb',
+};
 
 export {
-  colors, fonts, spacing, alignment,
+  colors, fonts, unit, noImageSrc,
 };

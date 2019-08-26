@@ -5,14 +5,14 @@ const styles = StyleSheet.create({
   root: {},
 });
 
-class TextBox extends Component {
+class DropDown extends Component {
   render() {
     return (
       <View style={styles.root}>
-        <Text>text box</Text>
+        <Text>drop down</Text>
       </View>
     );
   }
 }
 
-export default TextBox;
+export default DropDown;

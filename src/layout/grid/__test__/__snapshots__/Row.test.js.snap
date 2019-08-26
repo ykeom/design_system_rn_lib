@@ -1,11 +1,11 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`TextBox should render 1`] = `
+exports[`Row should render 1`] = `
 <View
   style={Object {}}
 >
   <Text>
-    text box
+    layout
   </Text>
 </View>
 `;

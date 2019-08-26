@@ -1,11 +1,11 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 import toJson from 'enzyme-to-json';
-import Chip from '../Chip';
+import GNB from '../GNB';
 
-describe('Chip', () => {
+describe('GNB', () => {
   it('should render', () => {
-    const component = shallow(<Chip />);
+    const component = shallow(<GNB />);
 
     expect(component.length).toBe(1);
     expect(toJson(component)).toMatchSnapshot();

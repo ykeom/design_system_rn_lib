@@ -2,10 +2,15 @@
 
 exports[`Container should render 1`] = `
 <View
-  style={Object {}}
->
-  <Text>
-    container
-  </Text>
-</View>
+  class={null}
+  style={
+    Array [
+      Object {
+        "backgroundColor": "#ffffff",
+        "height": "100%",
+      },
+      null,
+    ]
+  }
+/>
 `;

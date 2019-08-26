@@ -1,11 +1,11 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 import toJson from 'enzyme-to-json';
-import TextBox from '../TextBox';
+import DropDown from '../DropDown';
 
-describe('TextBox', () => {
+describe('DropDown', () => {
   it('should render', () => {
-    const component = shallow(<TextBox />);
+    const component = shallow(<DropDown />);
 
     expect(component.length).toBe(1);
     expect(toJson(component)).toMatchSnapshot();

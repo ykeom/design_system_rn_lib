@@ -1,11 +1,11 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Select should render 1`] = `
+exports[`TimePicker should render 1`] = `
 <View
   style={Object {}}
 >
   <Text>
-    select
+    time picker
   </Text>
 </View>
 `;
